@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: elevator-controller
+Version: 0.1.0
+Summary: System design documentation for elevator controller with requirements, architecture, state diagrams, safety analysis, and validation plans
+Home-page: https://github.com/niran/elevator_controller
+Author: Author
+Author-email: Author <author@example.com>
+License: MIT
+Project-URL: Repository, https://github.com/niran/elevator_controller
+Project-URL: Documentation, https://github.com/niran/elevator_controller/blob/main/INDEX.md
+Keywords: elevator,control-system,safety,system-design
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Hardware
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandoc-include>=1.4.3
+Requires-Dist: panflute>=2.0.5
+Requires-Dist: pypandoc>=1.17
+Requires-Dist: PyYAML>=3
+Requires-Dist: natsort>=7
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: flake8>=6.0; extra == "dev"
+Requires-Dist: mypy>=1.0; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# elevator_controller
+System design for elevator controller: Requirements, architecture (HLD/LLD), state diagrams, safety analysis (FMEA), fault scenarios, communication protocols, and validation plans.
