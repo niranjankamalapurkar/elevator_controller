@@ -3,7 +3,7 @@
 This section contains safety analysis documentation including FMEA, hazard analysis, and risk assessment.
 
 ## Contents
-- [FMEA (Failure Mode and Effects Analysis)](./fmea.md)
+- [FMEA (Failure Mode and Effects Analysis)](./fmea.csv)
 - [Hazard Analysis](./hazard_analysis.md)
 - [Risk Assessment](./risk_assessment.md)
 

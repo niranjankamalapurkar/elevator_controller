@@ -1,8 +1,0 @@
-- failure_mode: "Brake Slip in Idle"
-  cause: "Mechanical Fatigue"
-  potential_effects:
-  severity: 10
-  occurrence: 1
-  detection: 8
-  RPN: 80
-  mitigation: "Redundant dual-channel monitor switches"
