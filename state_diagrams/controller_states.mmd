@@ -1,0 +1,45 @@
+---
+title: elevator_controller
+---
+
+stateDiagram-v2
+    [*] --> Initialization
+
+    Initialization --> Recovery: Invalid Current_Floor_ID
+    Initialization --> Idle: Valid Current_Floor_ID
+
+    Recovery --> Idle: Valid Current_Floor_ID Reached
+
+    state Idle {
+        [*] --> Waiting
+        Waiting --> Waiting: No_User_Input
+    }
+
+    Idle --> Moving: Current_Floor_ID != Target_Floor_ID && Door_Closed && Door_Locked
+
+    state Moving {
+        [*] --> Accelerate
+        Accelerate --> Constant_Velocity
+        Constant_Velocity --> Decelerate: Distance_To_Target_Floor < Threshold
+        Decelerate --> Stop: Floor_Alignment == TRUE
+    }
+
+    Moving --> Arrival: Velocity = 0 && Mechanical_Brake_Engaged
+    
+    state Arrival {
+        [*] --> Door_Opening
+        Door_Opening --> Door_Opened
+        Door_Opened --> Loading
+
+        state Loading {
+            [*] --> Hold_Door_Open
+            Hold_Door_Open --> Door_Closing: Dwell_Time > Threshold
+            
+            Door_Closing --> Door_Reverse: Obstruction_Detected
+            Door_Reverse --> Door_Closing: Obstruction_Cleared
+
+            Door_Closing --> Door_Closed
+        }
+    }
+
+    Arrival --> Idle

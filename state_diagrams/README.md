@@ -4,7 +4,7 @@ This section contains state diagrams for various components of the elevator cont
 
 ## Contents
 - [Elevator States](./elevator_states.md)
-- [Controller States](./controller_states.md)
+- [Controller States](./controller_states.mmd)
 - [Call Processing](./call_processing.md)
 
 ## Overview
