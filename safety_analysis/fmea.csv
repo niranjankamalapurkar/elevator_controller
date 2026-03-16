@@ -1,27 +1,17 @@
 ﻿Function,Failure Mode,Failure Effect,Failure Causes,Severity,Occurrence,Detection,RPN,Mitigations
-Elevator user input,Failing to detect user input,User/Rider waits and retries and eventually gives up.,Issue with sensor or switches,4,5,2,40,"Diagnostics for Sensors, relays and switches"
-Loading phase,Elevator Floor allignment at Stop is > threshold,Rider/User may trip. Rider/User if in wheelchair may not be able to easily get out,Issue with floor alignment control logic,6,7,2,84,
-,,,Issue with floor proximity sensor resulting in elevator not able to allign properly,6,7,2,84,"Diagnostics for Sensors, relays and switches"
+Elevator user input,Failing to detect user input,User/Rider waits and retries and eventually gives up.,Issue with sensor or switches,8,5,5,200,"Diagnostics for Sensors, relays and switches"
+Loading phase,Elevator Floor allignment at Stop is > threshold,Rider/User may trip. Rider/User if in wheelchair may not be able to easily get out,Issue with floor alignment control logic,9,7,5,315,
+,,,Issue with floor proximity sensor resulting in elevator not able to allign properly,9,7,5,315,"Diagnostics for Sensors, relays and switches"
 ,"Elevator moves in ""Loading"" state",User/Rider may get stuck and elevator motion in this case can be life threatning,Obstruction detection and safety loop logic failure,10,7,5,350,"Assuming simulatoin tests and field tests are in place, when such failure occurs, what is needed is data at that point to understand what system was perceiving. Then analyze what broke the system."
-,,,Mechanical Brake failure,10,7,2,140,Add a redundant mechanical break to make system robust. Have diagnostics in place to detect failure of any mechanical break. Stop elevator operation when break failure is detected. 
-Elevator Door operation,Door fails to egress at max width,User/Rider not able to get out of elevator,Door Motor Failure,6,5,2,60,"Door motor diagnostics - stuck, STB, STG etc"
-,,,Motor Max Switch Failure,6,5,2,60,Sensor that detects door position failed. Need sensor diagnostics
-,Door takes forever to open and close,User/Rider experience - frustration,Door Motor Wear and tear,4,5,2,40,"Door motor diagnostics - Time to open, Time to close"
-,Elevator door fails to stop and reverse when obstruction is detected while closing,User/Rider may get stuck and elevator motion in this case can be life threatning,Obstruction detection logic failure,10,,,0,
-,Door is stuck close with user/rider inside,User/Rider panic and frustration,Door motor failure,6,5,2,60,"Door motor diagnostics - stuck, STB, STG etc"
-Elevator motion boundary,Elevator strikes overhead buffer or pit buffer.,At high speed life threatning impact,Elevator failing to read its location or there is some offset or error in location reader,10,5,2,100,Diagnostics to detect position offset or error
+,,,Mechanical Brake failure,10,7,5,350,Add a redundant mechanical break to make system robust. Have diagnostics in place to detect failure of any mechanical break. Stop elevator operation when break failure is detected. 
+Elevator Door operation,Door fails to egress at max width,User/Rider not able to get out of elevator,Door Motor Failure,6,5,5,150,"Door motor diagnostics - stuck, STB, STG etc"
+,,,Motor Max Switch Failure,6,5,5,150,Sensor that detects door position failed. Need sensor diagnostics
+,Door takes forever to open and close,User/Rider experience - frustration,Door Motor Wear and tear,4,5,5,100,"Door motor diagnostics - Time to open, Time to close"
+,Elevator door fails to stop and reverse when obstruction is detected while closing,User/Rider may get stuck and elevator motion in this case can be life threatning,Obstruction detection logic failure,10,3,5,150,
+,Door is stuck close with user/rider inside,User/Rider panic and frustration,Door motor failure,6,5,5,150,"Door motor diagnostics - stuck, STB, STG etc"
+Elevator motion boundary,Elevator strikes overhead buffer or pit buffer.,At high speed life threatning impact,Elevator failing to read its location or there is some offset or error in location reader,10,5,5,250,Diagnostics to detect position offset or error
 Elevator motion,Elevator initiates motion while doors are not fully locked.,Shear hazard/Fatality,Door interlock bypass,10,5,5,250,
-,,,sensor welded shut,10,5,2,100,
-,Elevator drifts away from floor with doors open,,,,,,,
-,Elevator stops abruptly due to power failure.,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
+,,,sensor welded shut,10,5,5,250,
+,Elevator drifts away from floor with doors open,Shear hazard/Fatality,Mechanical Brake failure,10,7,5,350,Add a redundant mechanical break to make system robust. Have diagnostics in place to detect failure of any mechanical break. Stop elevator operation when break failure is detected. 
+,Power failure,Elevator is stops abruptly and is inoperable. Rider is entraped.,Power failure,8,7,5,280,"System shall safely transit to safe state. In safe state, system shall use gravity deceleration or battery backup for safe rider exit"
+,Elevator gives jerk at start and stop,Customer panic and dissatisfaction,Wear and tear of elevator motor electric braking,5,5,3,75,Design shall able to detect through diagnostics
