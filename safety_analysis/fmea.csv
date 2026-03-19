@@ -11,7 +11,7 @@ Elevator Door operation,Door fails to egress at max width,User/Rider not able to
 ,Door is stuck close with user/rider inside,User/Rider panic and frustration,Door motor failure,6,5,5,150,"Door motor diagnostics - stuck, STB, STG etc"
 Elevator motion boundary,Elevator strikes overhead buffer or pit buffer.,At high speed life threatning impact,Elevator failing to read its location or there is some offset or error in location reader,10,5,5,250,Diagnostics to detect position offset or error
 Elevator motion,Elevator initiates motion while doors are not fully locked.,Shear hazard/Fatality,Door interlock bypass,10,5,5,250,
-,,,sensor welded shut,10,5,5,250,
+,,,sensor welded shut,10,5,5,250,Sensor diagnostics
 ,Elevator drifts away from floor with doors open,Shear hazard/Fatality,Mechanical Brake failure,10,7,5,350,Add a redundant mechanical break to make system robust. Have diagnostics in place to detect failure of any mechanical break. Stop elevator operation when break failure is detected. 
 ,Power failure,Elevator is stops abruptly and is inoperable. Rider is entraped.,Power failure,8,7,5,280,"System shall safely transit to safe state. In safe state, system shall use gravity deceleration or battery backup for safe rider exit"
 ,Elevator gives jerk at start and stop,Customer panic and dissatisfaction,Wear and tear of elevator motor electric braking,5,5,3,75,Design shall able to detect through diagnostics
